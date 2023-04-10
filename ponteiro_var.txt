@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std; 
+
+int main() 
+{
+    //nova variavel
+    int Var = 3;
+    //novo ponteiro
+    int* pVar;
+    //valor do ponteiro como valor de Var
+    pVar = &Var;
+    
+    cout << Var << endl;
+    cout << *pVar << endl;
+    cout << pVar << endl;
+}

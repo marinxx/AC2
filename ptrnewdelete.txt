@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std; 
+
+int main() 
+{
+    //novo ponteiro que permite a locaçao da memoria
+    int *ptr = new int;
+    //valor do ponteiro
+    *ptr = 7;
+    
+    cout << *ptr  << endl;
+    cout << ptr << endl;
+    
+    //permite realocar a memoria
+    delete ptr;
+    ptr = nullptr;
+    
+    cout << *ptr  << endl;
+    cout << ptr << endl;
+
+}
