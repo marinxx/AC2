@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+//codigo de uma media de alunos de salas
+int calculo(){
+    //quantidade de salas e o numero da coluna onde a quantidade de alunos fica
+    const int numdesalas = 6; 
+    const int numdealunos = 2;
+//começa o calculo da media por matriz
+ void calculomedia (int matriz[numdesalas][numdealunos]){
+      //se quer saber o total de alunos
+      int totaldealunos;
+//relaçao entre o numero de salas e o total de alunos
+for (int i; 1 < numdesalas; i++){
+    totaldealunos += matriz[i][1];
+}
+//conta da media
+double mediadealunos = totaldealunos / numdesalas;
+
+cout << endl << "Media de alunos: " << mediadealunos << endl;
+
+cout << "Salas com a quantidade acima da media: ";
+for (int i; 1 < numdesalas; i++){
+    if (matriz[i][1] > mediadealunos) {
+        cout << matriz[i][0] << " ";
+    }
+}
+}
+cout << endl;
+//numero de alunos e salas
+int main(){
+    int matriz[numdesalas][numdealunos] = {
+        [1, 35], //sala 1, 35 alunos
+        [2, 4], //sala 2, 4 alunos
+        [3, 22], //sala 3, 22 alunos
+        [4, 20], //sala 4, 20 alunos
+        [5, 36], //sala 5, 36 alunos
+        [6, 30], //sala 6, 30 alunos
+    };
+    
+    calculomediadassalas(matriz);
+
+return 0;
+}
+}
